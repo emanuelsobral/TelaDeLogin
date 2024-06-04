@@ -18,11 +18,15 @@
 					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 				</div>
 				<span>Ou use seus dados para se cadastrar</span>
-				<input type="text" placeholder="Nome" />
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Senha" />
+				<input id="nameRegister" type="text" placeholder="Nome" onchange="validateFiels()"/>
+				<input id="emailRegister" type="email" placeholder="Email" onchange="validateFiels()"/>
+				<div id="ErroEmail"><P>Insira um Email Valido</P></div>
+				<input id="passwordRegister" type="password" placeholder="Senha" onchange="validateFiels()"/>
+				<input id="confirmPassword" type="password" placeholder="Repita a Senha" onchange="validateFiels()"/>
+				<div id="ErroPassword"><P>Senhas Devem Ser iguais</P></div>
+				<div id="ErroFields"><P>Todos os Campos devem ser preenchidos</P></div>
 				<p>Ja possui uma conta? <br> <a id="signIn">Entrar</a></p>
-				<button>Cadastrar</button>
+				<button id="registerButton" disabled="true">Cadastrar</button>
 			</form>
 		</div>
 		<div class="form-container sign-in-container">
@@ -32,11 +36,12 @@
 					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 				</div>
 				<span>Ou entre com sua conta</span>
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Senha" />
-				<a href="#">Esqueci a senha</a>
+				<input id="emailLogin" type="email" id="email" placeholder="Email" onchange="validateFielsLogin()"/>
+				<input id="passwordLogin" type="password" placeholder="Senha" onchange="validateFielsLogin()"/>
+				<div id="ErroLogin"><P>Email e Senha Obrigatorios</P></div>
+				<button id="forgetPassword" disabled="true">Esqueci a senha</button>
 				<p>Ainda não possui uma conta? <br> <a id="signUp">Se Registre</a></p>
-				<button>Entrar</button>
+				<button id="loginButton" disabled="true">Entrar</button>
 			</form>
 		</div>
 		<div class="overlay-container">

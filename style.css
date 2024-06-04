@@ -29,7 +29,6 @@ p {
     font-weight: 100;
     line-height: 20px;
     letter-spacing: 0.5px;
-    margin: 20px 0 30px;
 }
 
 span {
@@ -60,6 +59,7 @@ button:hover {
     transition: .2s ease;
     transform: scale(1.05);
     background-color: #FFC100;
+    cursor: pointer;
 }
 
 button:active {
@@ -73,6 +73,16 @@ button:focus {
 button.ghost {
     background-color: transparent;
     border-color: #FFFFFF;
+}
+
+button[disabled] {
+    background-color: #ffbf0081;
+    color: #FFFFFF;
+}
+
+button[disabled]:hover  {
+    transform: scale(1);
+    cursor: default;
 }
 
 form {
@@ -102,9 +112,9 @@ input {
             0 10px 10px rgba(0,0,0,0.22);
     position: relative;
     overflow: hidden;
-    width: 60%;
+    width: 80%;
     max-width: 100%;
-    min-height: 60%;
+    min-height: 80%;
 }
 
 
@@ -259,6 +269,29 @@ input {
 .form-container a {
     color: #FCA311;
     cursor: pointer;
+}
+
+#ErroLogin,#ErroEmail,#ErroPassword,#ErroFields{
+    margin: 5px;
+    height: 2.5rem;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    background-color: #FF4B2B;
+    border-radius: 20px;
+    display: none;
+}
+
+#forgetPassword {
+    color: #FCA311;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+#forgetPassword[disabled] {
+    color: #ffbf0081;
+    cursor: default;
 }
 
 @media only screen and (max-width: 788px) {
