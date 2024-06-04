@@ -171,3 +171,9 @@ function validateEmailLogin(emailLogin)
  {
     return  /\S+@\S+\.\S+/.test(emailLogin);;
 }
+
+//Paginaçao
+
+function Login() {
+    window.location.href = "home.html";
+}
