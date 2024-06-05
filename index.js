@@ -132,3 +132,11 @@ function getErrorMessage(error) {
         alert(getErrorMessage(error));
     })
 }
+
+//Continuar Logado
+
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        window.location.href = "/pages/home.html";
+    }
+});
